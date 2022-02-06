@@ -21,6 +21,11 @@ async function addForm(req,res){
     description:description,
   })
   }
+  routes.get('/', async (req, res, ) => {
+    
+    
+    res.status(200).json('Injaz BackEnd');
+  });
 
   module.exports=routes
   
