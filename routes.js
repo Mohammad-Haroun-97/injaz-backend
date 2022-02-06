@@ -22,9 +22,9 @@ async function addForm(req,res){
   })
   }
   routes.get('/', async (req, res, ) => {
+    let users=await contactFormModel.find({})
     
-    
-    res.status(200).json('Injaz BackEnd');
+    res.status(200).json(users);
   });
 
   module.exports=routes
