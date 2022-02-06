@@ -11,10 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(routes);
 
-mongoose.connect('mongodb://Mohammad-Haroun:awd123.@myfirstcluster-shard-00-00.xvzzr.mongodb.net:27017,myfirstcluster-shard-00-01.xvzzr.mongodb.net:27017,myfirstcluster-shard-00-02.xvzzr.mongodb.net:27017/Form?ssl=true&replicaSet=atlas-tlumk8-shard-0&authSource=admin&retryWrites=true&w=majority', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
+mongoose.connect(process.env.MONGO_URL)
 
 function start(port) {
   app.listen(port, () => {

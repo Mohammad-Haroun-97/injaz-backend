@@ -5,7 +5,6 @@ require("dotenv").config();
 
 routes.post('/addForm',addForm);
 async function addForm(req,res){
-    console.log(req.body);
   
     const {name, email, phoneNumber,description} = req.body;
     await contactFormModel.create({ 
